@@ -1,5 +1,5 @@
 import React from "react";
-import { render, screen, waitFor } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
 import TooltipSidebarModal from ".";
 import userEvent from "@testing-library/user-event";
 
@@ -49,19 +49,28 @@ describe("<TooltipSidebarModal />", () => {
     );
     userEvent.click(hyperLinkElement);
 
-    await waitFor(() => {
-      const body = screen.getByText(textBody)
-      expect(body).toBeInTheDocument()
-    })
+    expect(await screen.findByText(textBody)).toBeInTheDocument();
+    expect(await screen.findByText("Test Title")).toBeInTheDocument();
+    expect(await screen.findByText("subTest Title")).toBeInTheDocument();
+  });
 
-    await waitFor(() => {
-      const title = screen.getByText("Test Title")
-      expect(title).toBeInTheDocument()
-    })
+  test("Modal closes and displays correctly", async () => {
+    render(
+      <TooltipSidebarModal
+        informationText={textBody}
+        hyperLinkText="Click here for more information"
+        isHyperLink={true}
+        title="Test Title"
+        subTitle="subTest Title"
+      />
+    );
+    const hyperLinkElement = screen.getByText(
+      "Click here for more information"
+    );
+    userEvent.click(hyperLinkElement);
+    expect(await screen.findByText(textBody)).toBeInTheDocument();
 
-    await waitFor(() => {
-      const subTitle = screen.getByText("subTest Title")
-      expect(subTitle).toBeInTheDocument()
-    })
+    userEvent.click(hyperLinkElement);
+    expect(screen.getByText(textBody)).toBeInTheDocument();
   });
 });
