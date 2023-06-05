@@ -8,7 +8,7 @@
 
 <div align="center">
   <h3>
-    <a href="https://image-uploader-sand.vercel.app/">
+    <a href="https://thewilheim.github.io/interview-task/" target="blank">
       Demo
     </a>
   </h3>
