@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/interview-task/static/css/main.e05fb27e.css",
+    "main.css": "/interview-task/static/css/main.601c7af1.css",
     "main.js": "/interview-task/static/js/main.73cca252.js",
     "index.html": "/interview-task/index.html",
-    "main.e05fb27e.css.map": "/interview-task/static/css/main.e05fb27e.css.map",
+    "main.601c7af1.css.map": "/interview-task/static/css/main.601c7af1.css.map",
     "main.73cca252.js.map": "/interview-task/static/js/main.73cca252.js.map"
   },
   "entrypoints": [
-    "static/css/main.e05fb27e.css",
+    "static/css/main.601c7af1.css",
     "static/js/main.73cca252.js"
   ]
 }
