@@ -3,6 +3,10 @@
 
 body {font-family: 'Public Sans', Arial, sans-serif;}
 
+p {
+    line-height: 1.5;
+}
+
 .sidebar{
     background-color: rgba(0, 0, 0, 0.55);
     top: 0;
@@ -32,15 +36,6 @@ body {font-family: 'Public Sans', Arial, sans-serif;}
     justify-content: space-between;
 }
 
-
-.modalCloseBtn{
-    cursor: pointer;
-    position: absolute;
-    right: 4rem;
-    background-color: transparent;
-    border: 0;
-    font-size: 18px;
-}
 .hyperLink{
     display: inline;
     background: none;
@@ -69,22 +64,17 @@ body {font-family: 'Public Sans', Arial, sans-serif;}
     .sidebarContainer{
         position: fixed;
         bottom: 0;
-        background-color: #fff;
         width: 92%;
         font-size: 14px;
         height: 45%;
         padding: 1rem;
         left: 0;
-        z-index: 10;
         overflow: scroll;
     }
-
     .modalCloseBtn{
         cursor: pointer;
         position: absolute;
-        right: 4rem;
         background-color: transparent;
-        border: 0;
         font-size: 18px;
     }
   }
