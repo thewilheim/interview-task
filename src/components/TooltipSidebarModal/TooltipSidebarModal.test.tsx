@@ -14,7 +14,7 @@ describe("<TooltipSidebarModal />", () => {
         hyperLinkText="Click here for more information"
         isHyperLink={true}
         title="Test Title"
-        subTitle="Test Title"
+        subTitle="subTest Title"
       />
     );
     const hyperLinkElement = screen.getByText(
@@ -28,26 +28,40 @@ describe("<TooltipSidebarModal />", () => {
         informationText={textBody}
         hyperLinkText="Click here"
         title="Test Title"
-        subTitle="Test Title"
+        subTitle="subTest Title"
       />
     );
     const infomationIconElement = screen.getByTestId("infoIcon");
     expect(infomationIconElement).toBeInTheDocument();
   });
-  test("opens modal to display information", async () => {
+  test("Modal opens and displays correctly", async () => {
     render(
       <TooltipSidebarModal
         informationText={textBody}
         hyperLinkText="Click here for more information"
         isHyperLink={true}
         title="Test Title"
-        subTitle="Test Title"
+        subTitle="subTest Title"
       />
     );
     const hyperLinkElement = screen.getByText(
       "Click here for more information"
     );
     userEvent.click(hyperLinkElement);
-    await screen.findByText(textBody);
+
+    await waitFor(() => {
+      const body = screen.getByText(textBody)
+      expect(body).toBeInTheDocument()
+    })
+
+    await waitFor(() => {
+      const title = screen.getByText("Test Title")
+      expect(title).toBeInTheDocument()
+    })
+
+    await waitFor(() => {
+      const subTitle = screen.getByText("subTest Title")
+      expect(subTitle).toBeInTheDocument()
+    })
   });
 });
