@@ -12,18 +12,22 @@ function App() {
       <h1>Tooltip Sidebar Modal - Interview Task</h1>
       <h2>Usage</h2>
       <p>
-        Tooltip Sidebar Modal can work well for people who use a service
-        regularly. the idea for this component to provide more context or a longer explanations for technical or industry-specific terms.
+
+        The Tooltip Sidebar Modal is a user interface component that can be beneficial for individuals who frequently use a particular service or application. Its purpose is to offer additional context or detailed explanations for technical or industry-specific terms within the user interface.
+
+        Regular users of a service somtimes can often encounter terms or concepts that may be unfamiliar or require further clarification. In such cases, a Tooltip Sidebar Modal can be a valuable tool for enhancing user understanding and improving their overall experience.
+
+        When a user interacts with a specific term or element within the user interface, the component is triggered, displaying relevant information related to that particular item.
       </p>
       <h2>Examples</h2>
       <h4>Tooltip Sidebar Modal</h4>
       <p>
-        <TooltipSidebarModal informationText={mockTextBody} isHyperLink={true} title="Lorem Ipsum" subTitle="What is Lorem Ipsum" hyperLinkText="Lorem Ipsum"/> dolor sit amet consectetur, adipisicing elit. Dolor, facilis. Voluptatem debitis obcaecati quidem. Quae distinctio consequatur fuga at reprehenderit ad alias, sequi et, necessitatibus ullam non sit. Iste facere repudiandae ipsa in impedit vel eligendi labore, numquam nam consequatur, harum, omnis ullam dolorum commodi. Fuga aut atque ipsum quos doloremque modi unde natus nam veniam repellendus cumque doloribus dolores consequatur nemo fugit iste eos tempore, eveniet necessitatibus pariatur. Tempore sint assumenda reprehenderit quo sequi? Ut, cupiditate quisquam iste, perferendis unde tempore dolore ipsam architecto quam incidunt non, omnis sapiente quo itaque voluptas esse deleniti culpa ex deserunt vitae pariatur?
+        <TooltipSidebarModal informationText={mockTextBody} isHyperLink={true} title="Lorem Ipsum" subTitle="What is Lorem Ipsum" hyperLinkText="Lorem Ipsum" /> dolor sit amet consectetur, adipisicing elit. Dolor, facilis. Voluptatem debitis obcaecati quidem. Quae distinctio consequatur fuga at reprehenderit ad alias, sequi et, necessitatibus ullam non sit. Iste facere repudiandae ipsa in impedit vel eligendi labore, numquam nam consequatur, harum, omnis ullam dolorum commodi. Fuga aut atque ipsum quos doloremque modi unde natus nam veniam repellendus cumque doloribus dolores consequatur nemo fugit iste eos tempore, eveniet necessitatibus pariatur. Tempore sint assumenda reprehenderit quo sequi? Ut, cupiditate quisquam iste, perferendis unde tempore dolore ipsam architecto quam incidunt non, omnis sapiente quo itaque voluptas esse deleniti culpa ex deserunt vitae pariatur?
       </p>
 
       <h4>Tooltip Sidebar Modal With Icon </h4>
       <p>
-        Lorem Ipsum dolor sit amet consectetur, adipisicing elit. Dolor, facilis. Voluptatem debitis obcaecati quidem. Quae distinctio consequatur fuga at reprehenderit ad alias, sequi et, necessitatibus ullam non sit. Iste facere repudiandae ipsa in impedit vel eligendi labore, numquam nam consequatur, harum, omnis ullam dolorum commodi. Fuga aut atque ipsum quos doloremque modi unde natus nam veniam repellendus cumque doloribus dolores consequatur nemo fugit iste eos tempore, eveniet necessitatibus pariatur. Tempore sint assumenda reprehenderit quo sequi? Ut, cupiditate quisquam iste, perferendis unde tempore dolore ipsam architecto quam incidunt non, omnis sapiente quo itaque voluptas esse deleniti culpa ex deserunt vitae pariatur? <TooltipSidebarModal informationText={mockTextBodyTwo} title="Lorem Ipsum Title" subTitle="What really is Lorem Ipsum" hyperLinkText="Lorem Ipsum"/>
+        Lorem Ipsum dolor sit amet consectetur, adipisicing elit. Dolor, facilis. Voluptatem debitis obcaecati quidem. Quae distinctio consequatur fuga at reprehenderit ad alias, sequi et, necessitatibus ullam non sit. Iste facere repudiandae ipsa in impedit vel eligendi labore, numquam nam consequatur, harum, omnis ullam dolorum commodi. Fuga aut atque ipsum quos doloremque modi unde natus nam veniam repellendus cumque doloribus dolores consequatur nemo fugit iste eos tempore, eveniet necessitatibus pariatur. Tempore sint assumenda reprehenderit quo sequi? Ut, cupiditate quisquam iste, perferendis unde tempore dolore ipsam architecto quam incidunt non, omnis sapiente quo itaque voluptas esse deleniti culpa ex deserunt vitae pariatur? <TooltipSidebarModal informationText={mockTextBodyTwo} title="Lorem Ipsum Title" subTitle="What really is Lorem Ipsum" hyperLinkText="Lorem Ipsum" />
       </p>
     </div>
   );
