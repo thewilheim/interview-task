@@ -8,7 +8,7 @@
 
 <div align="center">
   <h3>
-    <a href="[thewilheim.github.io/interview-task](https://thewilheim.github.io/interview-task/)/" target="blank">
+    <a href="https://thewilheim.github.io/interview-task/" target="blank">
       Demo
     </a>
   </h3>
