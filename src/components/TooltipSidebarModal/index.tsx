@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./TooltipSidebarModal.css"
+import "./styles/TooltipSidebarModal.css"
 
 interface TooltipSidebarModalInterface {
   informationText: string;
@@ -20,25 +20,25 @@ function TooltipSidebarModal(props: TooltipSidebarModalInterface) {
 
   const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
 
-  const toggleSideModal = (event: any): void => {
-    if(!event.target.classList.contains('sidebarContainer')){
+  const toggleSideModal = (event: React.SyntheticEvent): void => {
+    const target = event.target as HTMLElement;
+    if(!target.classList.contains('sidebarContainer')){
       setIsModalOpen(previousState => !previousState)
     }
   };
   return (
     <>
       {isHyperLink ? (
-        <button className="hyperLink" onClick={(event) => toggleSideModal(event)}>{hyperLinkText}</button>
+        <button className="hyperLink" aria-label={hyperLinkText} onClick={(event) => toggleSideModal(event)}>{hyperLinkText}</button>
       ) : (
-        <button className="infoButton" onClick={(event) => toggleSideModal(event)}>
          <span
-          className="material-icons nsw-material-icons nsw-material-icons--info"
+          onClick={(event) => toggleSideModal(event)}
+          className="material-icons nsw-material-icons nsw-material-icons--info infoButton"
           aria-hidden="true"
           data-testid="infoIcon"
         >
           info
         </span>
-        </button>
         
       )}
       {isModalOpen ? (
@@ -46,7 +46,7 @@ function TooltipSidebarModal(props: TooltipSidebarModalInterface) {
           <div className="sidebarContainer">
             <div className="sidebarHeader">
               <h1>{title}</h1>
-              <span className="material-icons nsw-material-icons nsw-material-icons--error" aria-hidden="true">cancel</span>
+              <span className="material-icons nsw-material-icons nsw-material-icons--error infoButton" aria-hidden="true">cancel</span>
             </div>
             <h2>{subTitle}</h2>
             <p>{informationText}</p>

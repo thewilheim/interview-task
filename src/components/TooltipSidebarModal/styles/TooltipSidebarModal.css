@@ -61,6 +61,8 @@ body {font-family: 'Public Sans', Arial, sans-serif;}
     border: none;
     outline: none;
     cursor: pointer;
+    padding: 0;
+    vertical-align: middle;
 }
 
 @media only screen and (max-width: 600px) {
