@@ -1,21 +1,10 @@
 import React from 'react';
+import TooltipSidebarModal from './components/TooltipSidebarModal';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <TooltipSidebarModal informationText={"textBody"} hyperLinkText="Click here for more information" isHyperLink={true} informationTitle="Test Title" />
     </div>
   );
 }

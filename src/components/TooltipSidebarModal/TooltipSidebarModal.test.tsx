@@ -11,15 +11,9 @@ describe('<TooltipSidebarModal />', () => {
       const hyperLinkElement = screen.getByText('Click here for more information');
       expect(hyperLinkElement).toBeInTheDocument();
   });
-  test('renders TooltipSidebarModal usind information icon', () => {
+  test('renders TooltipSidebarModal as information icon', () => {
     render(<TooltipSidebarModal informationText={textBody} hyperLinkText="Click here" informationTitle="Test Title"/>);
-      const infomationIconElement = screen.getAllByTestId('infoIcon');
-      expect(infomationIconElement).toBeInTheDocument();
-  });
-
-  test('renders TooltipSidebarModal using  unfilled information icon', () => {
-    render(<TooltipSidebarModal informationText={textBody} hyperLinkText="Click here" informationTitle="Test Title" isUnFilledIcon={true}/>);
-      const infomationIconElement = screen.getAllByTestId('infoIconUnFilled');
+      const infomationIconElement = screen.getByTestId('infoIcon');
       expect(infomationIconElement).toBeInTheDocument();
   });
   test('opens modal to display information', () => {
