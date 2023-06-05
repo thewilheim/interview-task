@@ -4,7 +4,7 @@ import TooltipSidebarModal from './components/TooltipSidebarModal';
 function App() {
   return (
     <div className="App">
-      <TooltipSidebarModal informationText={"textBody"} hyperLinkText="Click here for more information" isHyperLink={true} informationTitle="Test Title" />
+      <TooltipSidebarModal informationText={"textBody"} hyperLinkText="Click here for more information" informationTitle="Test Title" />
     </div>
   );
 }

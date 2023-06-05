@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./TooltipSidebarModal.css"
 
 interface TooltipSidebarModalInterface {
   informationText: string;
@@ -19,16 +20,18 @@ function TooltipSidebarModal(props: TooltipSidebarModalInterface) {
 
   const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
 
-  const toggleSideModal = (): void => {
-    setIsModalOpen((previousState) => !previousState);
+  const toggleSideModal = (event: any): void => {
+    if(!event.target.classList.contains('sidebarContainer')){
+      setIsModalOpen(previousState => !previousState)
+    }
   };
   return (
     <div>
-      {hyperLinkText ? (
-        <button onClick={() => toggleSideModal()}>{hyperLinkText}</button>
+      {isHyperLink ? (
+        <button onClick={(event) => toggleSideModal(event)}>{hyperLinkText}</button>
       ) : (
         <span
-          onClick={() => toggleSideModal()}
+          onClick={(event) => toggleSideModal(event)}
           className="infoIcon"
           aria-hidden="true"
           data-testid="infoIcon"
@@ -36,6 +39,14 @@ function TooltipSidebarModal(props: TooltipSidebarModalInterface) {
           info
         </span>
       )}
+      {isModalOpen ? (
+        <div className="sidebar" onClick={(event) => toggleSideModal(event)}>
+          <div className="sidebarContainer">
+            <h1>{informationTitle}</h1>
+            <p>{informationText}</p>
+          </div>
+        </div>
+      ) : null}
     </div>
   );
 }
