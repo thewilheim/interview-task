@@ -1,22 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,400;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+body {font-family: 'Public Sans', Arial, sans-serif;}
+
 .sidebar{
-    position: absolute;
+    background-color: rgba(0, 0, 0, 0.55);
     top: 0;
+    bottom: 0;
     left: 0;
     right: 0;
-    bottom: 0;
-    width: 100%;
-    height: 100vh;
-    background-color: rgba(128, 128, 128, 0.301);
+    position: fixed;
+    z-index: 5;
 }
 
 .sidebarContainer{
     display: flex;
     flex-direction: column;
-    padding: 5rem;
-    position: absolute;
-    top: 0;
+    padding: 3rem;
+    position: fixed;
     right: 0;
     width: 25%;
     height: 100vh;
     background-color: rgb(245, 245, 245);
+    z-index: 10;
 }
+
+.sidebarHeader{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.modalCloseBtn{
+    cursor: pointer;
+    position: absolute;
+    right: 4rem;
+    background-color: transparent;
+    border: 0;
+    font-size: 18px;
+}
+.hyperLink{
+    display: inline;
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 0;
+    font-size: 16px;
+    color: purple;
+    text-decoration: underline;
+}
+.hyperLink:hover{
+    color: rgb(82, 1, 82);
+    text-decoration: underline;
+}
+
+.infoButton{
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 600px) {
+    .sidebarContainer{
+        position: fixed;
+        bottom: 0;
+        background-color: #fff;
+        width: 100%;
+        height: 45%;
+        padding: 1rem;
+        left: 0;
+        z-index: 10;
+    }
+
+    .modalCloseBtn{
+        cursor: pointer;
+        position: absolute;
+        right: 4rem;
+        background-color: transparent;
+        border: 0;
+        font-size: 18px;
+    }
+  }

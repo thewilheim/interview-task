@@ -5,8 +5,8 @@ interface TooltipSidebarModalInterface {
   informationText: string;
   hyperLinkText: string;
   isHyperLink?: boolean;
-  informationTitle: string;
-  isUnfilledIcon?: boolean;
+  title: string;
+  subTitle: string;
 }
 
 function TooltipSidebarModal(props: TooltipSidebarModalInterface) {
@@ -14,8 +14,8 @@ function TooltipSidebarModal(props: TooltipSidebarModalInterface) {
     informationText,
     hyperLinkText,
     isHyperLink,
-    informationTitle,
-    isUnfilledIcon,
+    title,
+    subTitle,
   } = props;
 
   const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
@@ -26,28 +26,34 @@ function TooltipSidebarModal(props: TooltipSidebarModalInterface) {
     }
   };
   return (
-    <div>
+    <>
       {isHyperLink ? (
-        <button onClick={(event) => toggleSideModal(event)}>{hyperLinkText}</button>
+        <button className="hyperLink" onClick={(event) => toggleSideModal(event)}>{hyperLinkText}</button>
       ) : (
-        <span
-          onClick={(event) => toggleSideModal(event)}
-          className="infoIcon"
+        <button className="infoButton" onClick={(event) => toggleSideModal(event)}>
+         <span
+          className="material-icons nsw-material-icons nsw-material-icons--info"
           aria-hidden="true"
           data-testid="infoIcon"
         >
           info
         </span>
+        </button>
+        
       )}
       {isModalOpen ? (
         <div className="sidebar" onClick={(event) => toggleSideModal(event)}>
           <div className="sidebarContainer">
-            <h1>{informationTitle}</h1>
+            <div className="sidebarHeader">
+              <h1>{title}</h1>
+              <span className="material-icons nsw-material-icons nsw-material-icons--error" aria-hidden="true">cancel</span>
+            </div>
+            <h2>{subTitle}</h2>
             <p>{informationText}</p>
           </div>
         </div>
       ) : null}
-    </div>
+    </>
   );
 }
 
