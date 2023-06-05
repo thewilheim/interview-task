@@ -27,7 +27,7 @@
 
 ## Overview
 
-Tooltip Sidebar Modal can work well for people who use a service regularly. the idea for this component to provide more context or a longer explanations for technical or industry-specific terms.
+The Tooltip Sidebar Modal is a user interface component that can be beneficial for individuals who frequently use a particular service or application. Its purpose is to offer additional context or detailed explanations for technical or industry-specific terms within the user interface. Regular users of a service somtimes can often encounter terms or concepts that may be unfamiliar or require further clarification. In such cases, a Tooltip Sidebar Modal can be a valuable tool for enhancing user understanding and improving their overall experience. When a user interacts with a specific term or element within the user interface, the component is triggered, displaying relevant information related to that particular item.
 
 ### Built With
 
